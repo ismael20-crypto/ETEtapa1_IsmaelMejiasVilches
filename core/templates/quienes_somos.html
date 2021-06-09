@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quienes somos</title> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {%load static%}
+        <link href="{% static 'css/bootstrap.min.css'%}" type="text/css" rel="stylesheet"> 
+        <link href="{% static 'css/estilos.css'%}" type="text/css" rel="stylesheet">
+        <link rel="icon" type="image/css" href="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg'%}">
+    </head>
+    <body>
+        <!--barra de navegacion -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-light fondo-barra ">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+            <span class="navbar-toggler-icon"></span>
+             
+          </button>
+        
+        
+          <a class="navbar-brand">
+            <img src="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg'%}" width="50" height="50" alt="">
+          </a>
+        
+          
+    
+          
+    
+          <div class="collapse navbar-collapse" id="opciones">   
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'pagina_principal'%}" >Página principal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link color-barra" href="{% url 'galeria'%}">Galería</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link color-barra" href="#">Buscar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link color-barra" href="#">Iniciar sesión</a>
+              </li>     
+         
+            </ul>
+          </div>
+        </nav>
+      
+  
+      <!--cabeza (hero image)-->
+      <section class="banner col-md col-lg col-sm col-xl">
+        <div class="banner__info ">
+          <h1 class="banner__tittle">
+               Games GTX
+          </h1>
+          <p class="banner__p">
+              Bienvenido pequeño amigo ,hoy sabrás acerca de la página games gtx   
+          </p>
+        </div>
+
+      </section>
+
+
+
+      
+
+        <!--articlos, esto es decir que es algo para crear un articulo blog-->
+
+        <section class="section-1">
+            <div class="contenedor-texto col-md col-lg col-sm col-xl ">
+              <h2 class="palabras-seccion"> Objetivo</h2>
+              <p class="parrafo-seccion"> nuestro objetivo es, poder hacer que tras cada compra a nuestra página  web no haya hakeo de targetas  
+                <br>
+                y/o información personal del mismo , entregar un servicio de alta calidad y productos de alta calidad 
+              </p>
+              
+                  
+            </div>
+                <img  class="imagenes-secction" src="{% static 'img/undraw_nature_m5ll.svg'%}" alt="">
+        </section>
+
+        <section class="section-2">
+          <div class="contenedor-texto col-md col-lg col-sm col-xl">
+            <h2 class="palabras-seccion ">Misión</h2>
+            <p  class="parrafo-seccion"> La misión de nuestra empresa es entregar productos de alta calidad ,servicio al cliente 24/7
+              <br>
+              y tener un lugar seguro de donde descargar e comprar juegos de alta calidad
+            </p>
+            
+                
+          </div>
+          <img  class="imagenes-secction" src="{% static 'img/undraw_Navigation_re_wxx4.svg'%}" alt="">
+        </section>
+
+        <section class="section-3">
+            <div class="contenedor-texto col-md col-lg col-sm col-xl">
+              <h2 class="palabras-seccion">Visión</h2>
+              <p class="parrafo-seccion">Nuestra visión es tener un lugar seguro donde el cliente no tenga miedo de comprar , por robo de información
+                <br>
+                / hackeo de tarjetas . A través de una página e lugar donde su información solo se usará para gestionar la compra y nada mas
+                <br>
+
+              </p>
+              
+                
+            </div>
+            <img class="imagenes-secction" src="{% static 'img/undraw_relaunch_day_902d.svg'%}" alt="">
+        </section> 
+        
+
+        <!--para colocar un video-->
+        <section class="section2 section-4 col-md col-lg col-sm col-xl">
+          <h1 class="bannerp">Lo que es una  Página de venta de videojuegos</h1> 
+          <br>
+          <br>
+         
+        </section> 
+        <section class="section2 section-4 ">
+          <iframe class="tam-v" src="https://www.youtube.com/embed/zqaIpAHr67Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+         
+        </section> 
+        
+
+       
+
+      
+          
+ 
+
+
+
+
+
+
+
+
+
+
+
+          <!-- pie de paginas-->    
+        <footer >
+            <div class="left col-md col-lg col-sm col-xl">
+            <img id="logo-footer" src="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg'%}">
+            <h4>Autores: Cristobal Pardo,Daniel Landero y Ismael Mejias</h4>
+          
+            <h5>Redes Sociales</h5>
+          
+            <a href="https://www.facebook.com/Game-GTX-105894964946128"><img class="imagenes-iconos"  src="{% static 'img/facebook.png'%}" ></a>
+          
+            <a href="https://www.instagram.com/gamegtx/"><img class="imagenes-iconos"  src="{% static 'img/instagram.jpg'%}"> </a>
+            <br>
+            Gmail: Games_gtx@gmail.com  
+            <br>
+            Derechos reservados &copy; 2021
+            </div>
+        </footer>
+        
+      
+    </body>
+    
+
+
+
+    
+</html>

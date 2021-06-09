@@ -1,0 +1,365 @@
+.color-f
+{
+  background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+}
+.color-f2
+{
+  background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+}
+
+
+.fondo-barra
+{
+  background-image: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
+}
+
+
+
+
+
+
+
+
+
+/* iconos*/
+.imagenes-iconos
+{
+  border-color: #ffff;
+  
+  width: 77px;
+}
+
+
+/*-------------*/
+
+/* tarjetas ofertas*/
+#container-ofertas
+{
+  
+  margin: auto;
+  height: 30px;
+  border-style:solid ;
+  padding : 30px;
+  font-size: 15px;
+
+}
+
+/*-----------------*/
+
+
+/*ofertas*/
+.letras-ofertas
+{
+  font-family: cursive;
+  font-size: 25px;
+  text-align: center;
+  padding: 2px 19px;
+}
+
+/*----------------------*/
+
+
+
+
+
+/* tarjetas */
+.imagenes-tarjetas{
+  height: 220px;
+  width: 150px;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+/*------------------------------*/
+
+
+/*footer --------------------------------------*/
+
+footer {
+
+  
+  padding: 3px;
+  background-color: #000;
+  color: #fff;
+  color: bl;
+
+
+}
+
+
+#logo-footer
+{
+  width: 70px;
+  height: 70px;
+}
+/*  ************************************************   */
+
+
+
+
+/*quienes somos*/
+/* cabeza hero image*/
+
+.banner
+{
+  background: url(../img/carroucel2.3.jpg) fixed center/cover;
+  height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner::before
+{
+  content: "";
+  height: 100%;
+  width: 5000%;
+  background:#dd8a2b;
+  opacity: 0.8;
+}
+
+.banner__info
+{
+  padding: 0.3em;
+  position: absolute;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  color:#000;
+  margin: auto;
+
+}
+
+.banner_tittle
+{
+  line-height: 1.5;
+  font-size: 2em;
+  font-family: cursive;
+
+}
+
+.banner__p
+{
+  line-height: 2;
+  font-size: 0.9em;
+  font-family: cursive;
+  padding: 10%;
+
+}
+
+
+
+/* ---------------------------------*/
+
+
+
+
+/*seccion , datos modificados*/
+
+
+
+
+.palabras-seccion
+{
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.parrafo-seccion
+{
+  text-align: justify;
+  color: darkred;
+  font-family: fantasy;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+section img{
+  height: 250px;
+  
+}
+
+section
+{
+  display: flex;
+  height: 550px;
+  justify-content: space-evenly;
+  padding: 0 40px;
+  align-items: center;
+}
+
+.imagenes-secction{
+  height: 730px;
+  width: 150px;
+  
+  text-align: center;
+}
+
+
+.alinear
+{
+  text-align: center;
+  
+}
+
+.colorb
+{
+  color: #fff;
+}
+
+
+/*para darle color a algo especifico*/
+
+.section-1
+{
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.section-2
+{
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);;
+}
+.section-3
+{
+  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);;
+}
+
+.section-4
+{
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
+}
+
+
+/*tamaño video*/
+.tam-v
+{
+  width:"200";
+  height:"240";
+ 
+  top:0;
+
+}
+
+
+.bannerp
+{
+  
+  font-size: 22px;
+  font-family: cursive;
+  padding: 10%;
+  text-align: start;
+
+}
+
+.section2
+{
+  display: flex;
+  height: 160px;
+  justify-content: space-evenly;
+  padding: 0 40px;
+  align-items: center;
+}
+
+/* ----------------------------*/
+
+/*Galeria ofertas*/
+#container-ofertas
+{
+  
+  margin: auto;
+  height: 30px;
+  border-style:solid ;
+  padding : 30px;
+  font-size: 15px;
+
+}
+
+/*-----------------*/
+
+
+/*ofertas*/
+.letras-ofertas
+{
+  font-family: cursive;
+  font-size: 25px;
+  text-align: center;
+  padding: 2px 19px;
+}
+
+/*----------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/* Galeria */
+.imagenes-Galeria{
+  height: 215px;
+  width: 460px;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+/*---------------------*/
+
+.letras-galerias{
+  text-align: justify;
+
+}
+
+.texto {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container .row .card:hover .overlay{
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
