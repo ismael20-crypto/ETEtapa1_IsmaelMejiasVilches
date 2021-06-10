@@ -5,15 +5,16 @@
   <title>Creacion de Usuario</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
-  <link href="Css/estilos.css" type="text/css" rel="stylesheet">
-  <link rel="icon" type="image/css" href="img/9fef4a51-6960-4549-9802-c9310a17944f.jpg" width="30" height="30">
+  {% load static %}
+    <link href="{% static 'css/bootstrap.min.css'%}" type="text/css" rel="stylesheet"> 
+    <link href="{% static 'css/estilos.css' %}" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/css" href="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg'%}" width="30" height="30">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
   
 
-  <script src="javascript/java.js"></script>
+  <script src="{% static 'javascript/java.js'%}"></script>
   
 
   <style>
@@ -184,76 +185,70 @@
 
         <div class="container">    
           <form name="contact" method="POST"  action="inicio_session.html"  id="formulario_creacion">
-
+            {% csrf_token %}
             <div class="form-grop">
-              <label class="lmensaje">Nombre:</label><br>
-              <input class="form-control" type="text" id="nombre" name="nom" value="" placeholder="ingrese su nombre" required onchange="mayusculas()" onfocus="cambiarc(this)" onmouseout="volver(this)" required minlength="3"><br>
+              {{formulario_c.nombre_f.label}}
+              {{formulario_c.nombre_f}}
+              <br>
             </div>
 
             <div class="form-group">
-              <label for="apellido">Apellido:</label><br>
-              <input class="form-control" type="text" name="apellido" id="apellido" required placeholder="ingrese su apellido" onchange="mayusculas2()" onfocus="cambiarc(this)" onmouseout="volver(this)"  required minlength="5"><br>
+              {{formulario_c.apellido_f.label}}
+              {{formulario_c.apellido_f}}
+              <br>
             </div>
 
             <div class="form-group">      
-              <label for="edad">Ingrese su edad :</label><br>
-              <input type="number" name="edad" id="edad"  placeholder="edad" min="7" max="100" maxlenght="3" required><br> 
+              {{formulario_c.edad_f.label}}<br>
+              {{formulario_c.edad_f}}<br> 
 
             </div>
 
             <div class="form-group">
-              <label for="lnumero">Ingrese su número de teléfono:</label><br>
-
-              <input class="form-control" type="text" id="NumeroT" name="numeroT" placeholder="123456789" minlength="9" onfocus="cambiarc(this)" onmouseout="volver(this)" required>
+              {{formulario_c.numero_t_f.label}}<br>
+              {{formulario_c.numero_t_f}}
             </div>
 
 
             <div class="form-group">
-              <label for="fechaN">Ingrese su fecha de nacimiento:</label> <br>
-              <input type="date" name="fechaN" id="fechaN" class="form-grop" required min="1921-01-01"  required>              
+              {{formulario_c.fecha_nacimiento_f.label}}
+              {{formulario_c.fecha_nacimiento_f}}
             </div>
 
 
             
             
             <div class="form-check">
-              <label  class="form-check-label" for="genero">Seleccione su género:</label><br>
-              
-              <input type="radio" id="gHombre" name="genero" value="hombre" class="from-check-input" required>
-              <label for="lhombre" class="from-check-label">Hombre</label><br>
-
-              <input type="radio" id="gMujer" name="genero" value="Mujer" class="from-check-input" required>
-              <label for="lmujer" class="from-check-label">Mujer</label><br>
-              
-              <input type="radio" id="gOtro" name="genero" value="otro" class="from-check-input" required>
-              <label for="lotro" class="from-check-label">otro</label>
-              
+              {{formulario_c.genero_f.label}}
+              {{formulario_c.genero_f}}
               
             </div>
 
             <div class="form-group">
-              <label for="lemail" class="form-check-label">Ingrese su email:</label>
-              <input type="email" class="form-control" id="email" placeholder="fulanito@gmail.com" name="email" required onfocus="cambiarc(this)" onmouseout="volver(this)"  required>
+              {{formulario_c.email_f.label}}
+              {{formulario_c.email_f}}
+              
               
             </div>
 
             <div class="form-grop">
-              <label for="lusuario">Nombre Usuario:</label><br>
-
-              <input type="text" class="form-control" name="NombreU" id="NombreU" required placeholder="ingrese su nombre de usuario" minlength="8" onfocus="cambiarc(this)" onmouseout="volver(this)"  required><br>
+              {{formulario_c.nombre_usuario_f.label}}
+              {{formulario_c.nombre_usuario_f}}
+             
             </div>
 
             <div class="form-group">
-              <label for="lcontra">Crea tu nueva contraseña:</label><br>
-              <input class="from-control" type="password" id="contraseña" name="contraseña" placeholder="ingrese su contraseña" minlength="8" onfocus="cambiarc(this)" onmouseout="volver(this)"  required>
+              {{formulario_c.contrasena.label}}
+              {{formulario_c.contrasena}}
+              
             </div>
 
             <div class="form-group">
-              <label for="lcontra">Repita su contraseña</label><br>
-              <input class="from-control" type="password" id="contraseña2" name="contraseña2" placeholder="ingrese su contraseña" minlength="8" onfocus="cambiarc(this)" onmouseout="volver(this)"  required>
+              {{formulario_c.contrasena2.label}}
+              {{formulario_c.contrasena2}}
             </div>
             
-            <a href="Tipo_de_Juegos.html">pinche aqui para usted colocar sus preferencias en juegos</a><br><br>
+            <a href="#">pinche aqui para usted colocar sus preferencias en juegos</a><br><br>
 
 
 
@@ -288,14 +283,14 @@
       <footer >
 
         <div class="left col-md col-lg col-sm col-xl">
-          <img id="logo-footer" src="img/9fef4a51-6960-4549-9802-c9310a17944f.jpg">
+          <img id="logo-footer" src="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg' %}">
           <h4>Autores: Cristobal Pardo,Daniel Landero y Ismael Mejias</h4>
           
           <h5>Redes Sociales</h5>
           
-          <a href="https://www.facebook.com/Game-GTX-105894964946128"><img class="imagenes-iconos"  src="img/facebook.png" ></a>
+          <a href="https://www.facebook.com/Game-GTX-105894964946128"><img class="imagenes-iconos"  src="{% static 'img/facebook.png'%}" ></a>
           
-          <a href="https://www.instagram.com/gamegtx/"><img class="imagenes-iconos"  src="img/instagram.jpg"> </a>
+          <a href="https://www.instagram.com/gamegtx/"><img class="imagenes-iconos"  src="{% static 'img/instagram.jpg'%}"> </a>
           <br>
           Gmail: Games_gtx@gmail.com  
           derechos reservados &copy; 
