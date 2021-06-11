@@ -9,7 +9,7 @@ class formulario_c(ModelForm):
 
         fields = ['nombre_f','apellido_f','edad_f','numero_t_f','fecha_nacimiento_f','genero_f','email_f','nombre_usuario_f','contrasena','contrasena2']
 
-        labels ={
+        labels={
             'nombre_f': 'Nombre',
             'apellido_f': 'Apellido',
             'edad_f': 'Edad',
@@ -19,112 +19,100 @@ class formulario_c(ModelForm):
             'email_f': 'Email ',
             'nombre_usuario_f': 'Nombre de usuario',
             'contrasena': 'Contraseña',
-            'contrasena2':'contraseña'
+            
         }
 
         widgets ={
-            'nombre_f': forms.TextInput (
-                attrs ={
-                    'class':'form-control',
-                    'placeholder':'ingrese su nombre',
+            'nombre_f': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'ingrese su nombre',
 
-                    'onchange':'mayusculas()',
-                    'onfocus':'cambiarc(this)',
-                    'onmouseout':'volver(this)',
-                    'minlength':'3',
+                    'onchange': 'mayusculas()',
+                    'onfocus': 'cambiarc(this)',
+                    'onmouseout': 'volver(this)',
+                    'minlength': '3',
                     'name':'nom'
                 }
             ),
 
-            'apellido_f': forms.TextInput (
-                attrs ={
-                    'class':'form-control',
-                    'name':'apellido',
-                    'placeholder':'ingrese su apellido',
-                    'onchange':'mayusculas2()',
-                    'onfocus':'cambiarc(this)',
-                    'onmouseout':'volver(this)',
-                    'minlength':'5'
+            'apellido_f': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'name': 'apellido',
+                    'placeholder': 'ingrese su apellido',
+                    'onchange': 'mayusculas2()',
+                    'onfocus': 'cambiarc(this)',
+                    'onmouseout': 'volver(this)',
+                    'minlength': '5'
                 }
             ),
-            'edad_f': forms.IntegerField(
+            'edad_f': forms.TextInput(
                 attrs={
-                    'name':'edad',
-                    'class':'form-control',
-                    'placeholder':'edad',
-                    'min':'7',
-                    'max':'100',
-                    'maxlenght':'3'
+                    'name': 'edad',
+                    'class': 'form-control',
+                    'placeholder': 'edad',
+                    'min': '7',
+                    'max': '100',
+                    'maxlenght': '3'
                 }
             ),
 
-            'numero_t_f': forms.IntegerField(
+            'numero_t_f': forms.TextInput(
                 attrs={
-                    'class':'form-control',
-                    'name':'numeroT',
-                    'placeholder':'123456789',
-                    'minlength':'9' ,
-                    'onfocus':'cambiarc(this)',
-                    'onmouseout':'volver(this)'
+                    'class': 'form-control',
+                    'name': 'numeroT',
+                    'placeholder': '123456789',
+                    'minlength': '9' ,
+                    'onfocus': 'cambiarc(this)',
+                    'onmouseout': 'volver(this)'
                 }
             ),
 
             'fecha_nacimiento_f': forms.DateInput(
                 attrs={
-                    'name':'fechaN',
-                    'class':'form-grop' ,
-                    'min':'1921-01-01' 
+                    'name': 'fechaN',
+                    'class': 'form-grop' ,
+                    'min': '1921-01-01' 
                 
                 }
             ),
 
             'genero_f': forms.Select(
                 attrs={
-
-                
                     'class': 'form-control',
-                    'name':'genero'
+                    'name': 'genero'
                 }
 
             ),
             'email_f': forms.TextInput(
                 attrs={
-                'class':'form-control',
-                'placeholder':'fulanito@gmail.com',
-                'name':'email',
-                'onfocus':'cambiarc(this)',
-                'onmouseout':'volver(this)'
+                'class': 'form-control',
+                'placeholder': 'fulanito@gmail.com',
+                'name': 'email',
+                'onfocus': 'cambiarc(this)',
+                'onmouseout': 'volver(this)'
                 }
             ),
             'nombre_usuario_f': forms.TextInput(
                 attrs={
-                    'name':'NombreU',
-                    'class':'form-control',
-                    'placeholder':'ingrese su nombre de usuario',
-                    'minlength':'8',
-                    'onfocus':'cambiarc(this)',
-                    'onmouseout':'volver(this)'
+                    'name': 'NombreU',
+                    'class': 'form-control',
+                    'placeholder': 'ingrese su nombre de usuario',
+                    'minlength': '8',
+                    'onfocus': 'cambiarc(this)',
+                    'onmouseout': 'volver(this)'
 
                 }
             ),
-            'contrasena' : forms.TextInput(
+            'contrasena' : forms.PasswordInput(
                 attrs={
-                    'class':'from-control',
-                    'name':'contraseña' ,
-                    'placeholder':'ingrese su contraseña',
-                    'minlength':'8' ,
-                    'onfocus':'cambiarc(this)',
-                    'onmouseout':'volver(this)'
-                }
-            ),
-            'contrasena2' : forms.TextInput(
-                attrs={
-                    'class':'from-control',
-                    'name':'contraseña2' ,
-                    'placeholder':'repita su contraseña',
-                    'minlength':'8' ,
-                    'onfocus':'cambiarc(this)',
-                    'onmouseout':'volver(this)'
+                    'class': 'from-control',
+                    'name': 'contraseña' ,
+                    'placeholder': 'ingrese su contraseña',
+                    'minlength': '8' ,
+                    'onfocus': 'cambiarc(this)',
+                    'onmouseout': 'volver(this)'
                 }
             )
     }
