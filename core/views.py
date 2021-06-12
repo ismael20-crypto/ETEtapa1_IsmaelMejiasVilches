@@ -18,13 +18,13 @@ def quienes_s(request):
 
 def form_creacion(request):
 
-    if request.method =="POST":
-        formulario=creacion_u(request.POST)
+    if request.method == "POST":
+        formulario=formulario_c(request.POST)
         if formulario.is_valid():
            formulario.save()
            return redirect('pagina_principal')
     else:
-        formulario=creacion_u()
+        formulario=formulario_c()
     
     return render(request, 'core(2)/creacion_de_usuario.html', {'formulario_c': formulario})
 

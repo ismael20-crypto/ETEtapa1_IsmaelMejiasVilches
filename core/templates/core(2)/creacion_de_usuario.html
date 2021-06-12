@@ -187,15 +187,15 @@
           <form name="contact" method="POST"  action="inicio_session.html"  id="formulario_creacion">
             {% csrf_token %}
               <div class="form-group">
-                {{formulario_c.nombre_f.label}}
-                {{formulario_c.nombre_f}}
+                {{formulario_c.nombre_f.label}}<br>
+                {{formulario_c.nombre_f}}<br>
                 <br>
               </div>
 
               <div class="form-group">
-                {{formulario_c.apellido_f.label}}
-                {{formulario_c.apellido_f}}
-                <br>
+                {{formulario_c.apellido_f.label}}<br>
+                {{formulario_c.apellido_f}}<br>
+              
               </div>
 
               <div class="form-group">      
@@ -206,45 +206,46 @@
 
               <div class="form-group">
                 {{formulario_c.numero_t_f.label}}<br>
-                {{formulario_c.numero_t_f}}
+                {{formulario_c.numero_t_f}} <br>
               </div>
 
 
               <div class="form-group">
-                {{formulario_c.fecha_nacimiento_f.label}}
-                {{formulario_c.fecha_nacimiento_f}}
+                {{formulario_c.fecha_nacimiento_f.label}}<br>
+                {{formulario_c.fecha_nacimiento_f}}<br>
               </div>
 
 
               
               
               <div class="form-check">
-                {{formulario_c.genero_f.label}}
-                {{formulario_c.genero_f}}
+                {{formulario_c.genero_f.label}}<br>
+                {{formulario_c.genero_f}}<br>
+                
+              </div>
+              
+
+              <div class="form-group">
+                {{formulario_c.email_f.label}}<br>
+                {{formulario_c.email_f}}<br>
+                
                 
               </div>
 
               <div class="form-group">
-                {{formulario_c.email_f.label}}
-                {{formulario_c.email_f}}
-                
-                
-              </div>
-
-              <div class="form-group">
-                {{formulario_c.nombre_usuario_f.label}}
-                {{formulario_c.nombre_usuario_f}}
+                {{formulario_c.nombre_usuario_f.label}}<br>
+                {{formulario_c.nombre_usuario_f}}<br>
               
               </div>
 
               <div class="form-group">
-                {{formulario_c.contrasena.label}}
-                {{formulario_c.contrasena}}
+                {{formulario_c.contrasena.label}}<br>
+                {{formulario_c.contrasena}}<br>
                 
               </div>
 
             <div class="form-group">
-              <label for="a">Repita su contraseña</label>
+              <label for="a">Repita su contraseña</label><br>
               <input name="contrasena2" placeholder="repita su contaseña" type="password"> <br>
 
             </div>

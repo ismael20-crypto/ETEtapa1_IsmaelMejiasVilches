@@ -4,25 +4,25 @@ from .models import creacion_u
 
 class formulario_c(ModelForm):
 
-    class meta :
+    class Meta :
         model =  creacion_u
 
-        fields = ['nombre_f','apellido_f','edad_f','numero_t_f','fecha_nacimiento_f','genero_f','email_f','nombre_usuario_f','contrasena','contrasena2']
+        fields = ['nombre_f','apellido_f','edad_f','numero_t_f','fecha_nacimiento_f','genero_f','email_f','nombre_usuario_f','contrasena']
 
         labels={
             'nombre_f': 'Nombre',
             'apellido_f': 'Apellido',
             'edad_f': 'Edad',
-            'numero_t_f': 'Numero de telefono',
+            'numero_t_f': 'Número de teléfono',
             'fecha_nacimiento_f': 'Fecha de nacimiento',
-            'genero_f': 'Genero',
+            'genero_f': 'Género',
             'email_f': 'Email ',
             'nombre_usuario_f': 'Nombre de usuario',
             'contrasena': 'Contraseña',
             
         }
 
-        widgets ={
+        widgets={
             'nombre_f': forms.TextInput(
                 attrs={
                     'class': 'form-control',
@@ -69,7 +69,7 @@ class formulario_c(ModelForm):
                 }
             ),
 
-            'fecha_nacimiento_f': forms.DateInput(
+            'fecha_nacimiento_f': forms.SelectDateWidget(
                 attrs={
                     'name': 'fechaN',
                     'class': 'form-grop' ,
