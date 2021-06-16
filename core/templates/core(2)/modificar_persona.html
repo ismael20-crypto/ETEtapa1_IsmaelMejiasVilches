@@ -63,7 +63,64 @@
         <form method="POST" action="#" id="modificacion"> 
           {% csrf_token %}
             <div class="form-group">
-              {{form.as_table}}
+
+              <div class="form-group">
+                {{form.nombre_f.label}}
+                {{form.nombre_f}}
+                <br>
+              </div>
+
+              <div class="form-group">
+                {{form.apellido_f.label}}<br>
+                {{form.apellido_f}}<br>
+              
+              </div>
+
+              <div class="form-group">      
+                {{form.edad_f.label}}<br>
+                {{form.edad_f}}<br> 
+
+              </div>
+
+              <div class="form-group">
+                {{form.numero_t_f.label}}<br>
+                {{form.numero_t_f}} <br>
+              </div>
+
+
+              <div class="form-group">
+                {{form.fecha_nacimiento_f.label}}<br>
+                {{form.fecha_nacimiento_f}}<br>
+              </div>
+
+
+              
+              
+              <div class="form-check">
+                {{form.genero_f.label}}<br>
+                {{form.genero_f}}<br>
+                
+              </div>
+              
+
+              <div class="form-group">
+                {{form.email_f.label}}<br>
+                {{form.email_f}}<br>
+                
+                
+              </div>
+
+              <div class="form-group">
+                {{form.nombre_usuario_f.label}}<br>
+                {{form.nombre_usuario_f}}<br>
+              
+              </div>
+
+              <div class="form-group">
+                {{form.contrasena.label}}<br>
+                {{form.contrasena}}<br>
+                
+              </div>
             </div>
             <div>
               <input type="submit" id="mandar" value="enviar" class="btn btn-danger">
