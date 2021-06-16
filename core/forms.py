@@ -1,11 +1,11 @@
 from django import forms
 from django.forms import ModelForm,widgets
-from .models import creacion_u
+from .models import creacion_usuario
 
 class formulario_c(ModelForm):
 
     class Meta :
-        model =  creacion_u
+        model =  creacion_usuario
 
         fields = ['nombre_f','apellido_f','edad_f','numero_t_f','fecha_nacimiento_f','genero_f','email_f','nombre_usuario_f','contrasena']
 

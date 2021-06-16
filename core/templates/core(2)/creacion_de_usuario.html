@@ -14,7 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
   
 
-  <script src="{% static 'javascript/java.js'%}"></script>
+  <script src="{% static 'js/java.js'%}"></script>
   
 
   <style>
@@ -184,7 +184,7 @@
       <h3 class="alinear">Creacion de Usuario</h3>
 
         <div class="container">    
-          <form name="contact" method="POST"  action="inicio_session.html"  id="formulario_creacion">
+          <form name="contact" method="POST" id="formulario_creacion"> <!--action="inicio_session.html"-->
             {% csrf_token %}
               <div class="form-group">
                 {{formulario_c.nombre_f.label}}<br>

@@ -10,7 +10,7 @@ class genero(models.Model):
     def __str__(self):
         return(self.genero)
 
-class creacion_u(models.Model):
+class creacion_usuario(models.Model):
     nombre_f = models.CharField(max_length=20 , verbose_name='Nombre')
 
     apellido_f = models.CharField(max_length=20,verbose_name='Apellido')
@@ -21,7 +21,7 @@ class creacion_u(models.Model):
 
     fecha_nacimiento_f = models.DateField(verbose_name='Fecha de nacimiento')
 
-    genero_f = models.ForeignKey(genero ,on_delete=models.CASCADE)
+    genero_f = models.ForeignKey(genero ,on_delete=models.CASCADE, verbose_name="genero")
 
     email_f = models.CharField(max_length=40, verbose_name='Email')
 

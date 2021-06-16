@@ -1,0 +1,140 @@
+<!doctype html>
+<html >
+  <head>
+    <title>Página Principal</title> 
+    <meta charset="utf-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+
+
+    
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="{% static 'css/estilos.css' %}" type="text/css" rel="stylesheet">
+
+    <link rel="icon" href="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg' %}" width="30" height="30">
+    
+
+  </head>
+  <body  class="color-f">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light fondo-barra ">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+        <span class="navbar-toggler-icon"></span>
+         
+      </button>
+    
+    
+      <a class="navbar-brand">
+        <img src="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg'%} " width="50" height="50" alt="">
+      </a>
+    
+      
+
+      
+
+      <div class="collapse navbar-collapse" id="opciones">   
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " href="{% url 'quienes_somos' %}" >Quiénes somos?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link color-barra" href="{% url 'galeria' %}">Galería</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link color-barra" href="#">Buscar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link color-barra" href="#">Iniciar sesión</a>
+          </li>
+
+     
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="alinear">
+        <h3>Usuarios Creados</h3>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>nombre</th>
+                <th>apellido</th>
+                <th>edad</th>
+                <th>teléfono</th>
+                <th>fecha nacimiento</th>
+                <th>género</th>
+                <th>email</th>
+                <th>nombre usuario</th>
+                <th>contraseña</th>
+            </tr>
+        </thead>
+        <tbody>
+          {%for u in personas%}
+            <tr>
+                
+                    
+                    <td> {{u.nombre_f}}</td>
+                    <td> {{u.apellido_f}}</td>
+                    <td> {{u.edad_f}}</td>
+                    <td> {{u.numero_t_f}}</td>
+                    <td> {{u.fecha_nacimiento_f}}</td>
+                    <td> {{u.genero_f}}</td>
+                    <td> {{u.email_f}}</td>
+                    <td> {{u.nombre_usuario_f}}</td>
+                    <td> {{u.contrasena}}</td>
+                    <td><a href="{% url 'modificar' u.nombre_usuario_f%}">Modificar  </a></td>
+               
+            </tr>
+          {%endfor%}
+            
+
+        </tbody>
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- pie de paginas-->    
+    <footer >
+      <div class="left col-md col-lg col-sm col-xl">
+        <img id="logo-footer" src="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg'%}">
+        <h4>Autores: Cristobal Pardo,Daniel Landero y Ismael Mejias</h4>
+        
+        <h5>Redes Sociales</h5>
+        
+        <a href="https://www.facebook.com/Game-GTX-105894964946128"><img class="imagenes-iconos"  src="{% static 'img/facebook.png'%}" ></a>
+        
+        <a href="https://www.instagram.com/gamegtx/"><img class="imagenes-iconos"  src="{% static 'img/instagram.jpg'%}"> </a>
+        <br>
+        Gmail: Games_gtx@gmail.com  
+        derechos reservados &copy; 
+      </div>
+     
+    </footer>
+      
+    
+
+    
+
+          
+
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+  </body>
+</html>
