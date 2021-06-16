@@ -63,15 +63,17 @@
     <table class="table">
         <thead>
             <tr>
-                <th>nombre</th>
-                <th>apellido</th>
-                <th>edad</th>
-                <th>teléfono</th>
-                <th>fecha nacimiento</th>
-                <th>género</th>
-                <th>email</th>
-                <th>nombre usuario</th>
-                <th>contraseña</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Teléfono</th>
+                <th>Fecha nacimiento</th>
+                <th>Género</th>
+                <th>Email</th>
+                <th>Nombre usuario</th>
+                <th>Contraseña</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
             </tr>
         </thead>
         <tbody>
@@ -88,7 +90,8 @@
                     <td> {{u.email_f}}</td>
                     <td> {{u.nombre_usuario_f}}</td>
                     <td> {{u.contrasena}}</td>
-                    <td><a href="{% url 'modificar' u.nombre_usuario_f%}">Modificar  </a></td>
+                    <td><a href="{% url 'modificar' u.nombre_usuario_f%}" class="btn btn-primary">Modificar</a></td>
+                    <td><a href="{% url 'eliminar'  u.nombre_usuario_f%}" class="btn btn-primary">Eliminar  </a></td>
                
             </tr>
           {%endfor%}
@@ -97,6 +100,10 @@
         </tbody>
 
     </table>
+    <a href="{% url 'creacion_de_usuario'%}" class="btn btn-primary">Agregar otro usuario </a>
+
+    <br><br><br><br><br><br><br><br><br>
+
 
 
 

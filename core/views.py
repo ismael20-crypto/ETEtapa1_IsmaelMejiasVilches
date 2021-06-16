@@ -43,11 +43,20 @@ def modificar(request,id):
         formulario2=formulario_c(data=request.POST,instance=usuario)
         if formulario2.is_valid():
            formulario2.save()
-           return redirect('pagina_principal')
+           return redirect('mostrar_u')
     else:
         formulario2=formulario_c()
     
     return render(request, 'core(2)/modificar_persona.html', datos)
+
+
+
+def eliminar(request,id):
+
+    persona_e =creacion_usuario.objects.get(nombre_usuario_f=id)
+    persona_e.delete()
+    return redirect('mostrar_u')
+    
 
 
 
