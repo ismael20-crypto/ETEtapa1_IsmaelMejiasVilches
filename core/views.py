@@ -22,7 +22,7 @@ def form_creacion(request):
         formulario=formulario_c(request.POST)
         if formulario.is_valid():
            formulario.save()
-           return redirect('pagina_principal')
+           return redirect('mostrar_u')
     else:
         formulario=formulario_c()
     
@@ -57,39 +57,6 @@ def eliminar(request,id):
     persona_e.delete()
     return redirect('mostrar_u')
     
-
-'''Seralizers'''
-
-from rest_framework.serializers import Serializer
-from rest_framework import status
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from rest_framework.parsers import JSONParser
-from django.views.decorators.csrf import csrf_exempt
-from .serializers import VehiculoSerializer
-
-@csrf_exempt
-@api_view(['GET', 'POST'])
-
-def lista_vehiculos(request): 
-
-    if request.method== 'GET':
-        vehiculo = Vehiculo.objects.all()
-        serializer =VehiculoSerializer(vehiculo, many=True)
-        return Response(serializer.data)
-
-
-
-    elif request.method=='POST': 
-        data = JSONParser().parse(request)
-        serializer = VehiculoSerializer(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        else: 
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
 
 
 

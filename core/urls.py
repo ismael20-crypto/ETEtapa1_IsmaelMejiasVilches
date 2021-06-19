@@ -1,6 +1,5 @@
 from django.urls import path 
 from .views import pagina_p,galeria,quienes_s,form_creacion,mostrar_u,modificar,eliminar
-form_del_Vehiculo, lista Vehiculos
 
 urlpatterns = [
     path('',pagina_p, name="pagina_principal"),
@@ -9,6 +8,6 @@ urlpatterns = [
     path('creacion_usuario',form_creacion, name="creacion_de_usuario"),
     path('Mostrar_usuario',mostrar_u, name="mostrar_u"),
     path('modificar/<id>',modificar,name="modificar"),
-    path('elimina/<id>',eliminar,name="eliminar")
-    path('lista_vehiculos', lista_vehiculos, name="lista_vehiculos")
+    path('elimina/<id>',eliminar,name="eliminar"),
+   
 ]
