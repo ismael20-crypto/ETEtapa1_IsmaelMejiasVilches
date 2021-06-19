@@ -69,9 +69,8 @@ class formulario_c(ModelForm):
                 }
             ),
 
-            'fecha_nacimiento_f': forms.DateInput(
+            'fecha_nacimiento_f': forms.SelectDateWidget(
                 attrs={
-                    'placeholder':'2000-06-00',
                     'name': 'fechaN',
                     'class': 'form-grop' ,
                     'min': '1921-01-01' 
@@ -109,7 +108,7 @@ class formulario_c(ModelForm):
             'contrasena' : forms.PasswordInput(
                 attrs={
                     'class': 'from-control',
-                    'name': 'contra' ,
+                    'name': 'contraseña' ,
                     'placeholder': 'ingrese su contraseña',
                     'minlength': '8' ,
                     'onfocus': 'cambiarc(this)',

@@ -14,7 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
   
 
-  <script src="{% static 'js/java.js' %}"></script>
+  <script src="{% static 'js/java.js'%}"></script>
   
 
   <style>
@@ -67,11 +67,11 @@
 
           nombreU: "required",
 
-          contra: "required",
+          contrasena: "required",
 
           contrasena2: {
             required: true,
-          /*  equalTo: "#contra"*/
+            equalTo: "#contrasena"
 
           }
           
@@ -121,7 +121,7 @@
             minlength:'debe colocar por lo menos 8 caracteres'
           },
 
-          contra: {
+          contrasena: {
             required:'debe colocar una contraseña',
             minlength:'debe colocar por lo menos 8 caracteres'
           },
