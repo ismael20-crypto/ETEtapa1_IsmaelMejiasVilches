@@ -1,7 +1,7 @@
 <!doctype html>
 <html >
   <head>
-    <title>Página Principal</title> 
+    <title>Caos News</title> 
     <meta charset="utf-8">
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="{% static 'css/estilos.css' %}" type="text/css" rel="stylesheet">
 
-    <link rel="icon" href="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg' %}" width="30" height="30">
+    <link rel="icon" href="{% static 'img/DiariosdelMundo.jpg' %}" width="30" height="30">
 
 
  
@@ -53,7 +53,7 @@
     
     
       <a class="navbar-brand">
-        <img src="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg'%} " width="50" height="50" alt="">
+        <img src="{% static 'img/DiariosdelMundo.jpg'%} " width="50" height="50" alt="">
       </a>
     
       
@@ -63,13 +63,10 @@
       <div class="collapse navbar-collapse" id="opciones">   
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link " href="{% url 'quienes_somos' %}" >Quiénes somos?</a>
+            <a class="nav-link color-barra" href="{% url 'galeria' %}">Noticias Recientes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link color-barra" href="{% url 'galeria' %}">Galería</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link color-barra" href="#">Buscar</a>
+            <a class="nav-link color-barra" href="#">Buscador de Noticias</a>
           </li>
           <li class="nav-item">
             <a class="nav-link color-barra" href="#">Iniciar sesión</a>
@@ -103,13 +100,13 @@
           <div class="carousel-item active">
             <img class="d-block w-100" src="{% static 'img/1.jpg' %}"  alt="">
               <div class="carousel-caption">
-                <h2>Destacados de la semana</h2>
+                <h2>NOTICIAS DE LA SEMANA</h2>
               </div>
           </div>
           <div class="carousel-item">
               <img class="d-block w-100" src="{% static 'img/2.jpg'%}"  alt="">
               <div class="carousel-caption">
-                <h2>Destacados de la semana</h2>
+                <h2>NOTICIAS DE LA SEMANA</h2>
               </div>
           </div>
 
@@ -117,7 +114,7 @@
           <div class="carousel-item">
               <img class="d-block w-100" src="{% static 'img/3.jpg'%}"  alt="">
               <div class="carousel-caption">
-                <h2>Destacados de la semana</h2>
+                <h2>NOTICIAS DE LA SEMANA</h2>
               </div>
           </div>
 
@@ -125,7 +122,7 @@
           <div class="carousel-item">
             <img class="d-block w-100" src="{% static 'img/4.jpg'%}"  alt="">
             <div class="carousel-caption">
-              <h2>Destacados de la semana</h2>
+              <h2>NOTICIAS DE LA SEMANA</h2>
             </div>
         </div>
         
@@ -159,7 +156,7 @@
 
      <!--contenedor div del titulo -->
    <div class="container" id="container-ofertas">
-     <h4 class="center letras-ofertas"> Ofertas del Mes </h4>
+     <h4 class="center letras-ofertas"> Noticias del Mes </h4>
 
    </div>
     <br>
@@ -171,45 +168,45 @@
       <div class="row">
         <div class="col-md col-lg col-sm col-xl">        
           <div class="card" >
-            <img class="card-img-top imagenes-tarjetas" src="{% static 'img/re7.jpg'%}">
+            <img class="card-img-top imagenes-tarjetas" src="{% static 'img/a.jpg'%}">
             <div class="card-body">
-              <p class="card-text"> 20% <s>6.999$</s> ahora en 5.599$</p>
+              <p class="card-text"> Protestas en chile <s>Renuncia Piñera</s> Todos vamos por chile</p>
             </div>
           </div>
         </div>   
         
         <div class="col-md col-lg col-sm col-xl">        
           <div class="card">
-            <img class="card-img-top imagenes-tarjetas" src="{% static 'img/death by light.jpg'%}">
+            <img class="card-img-top imagenes-tarjetas" src="{% static 'img/b.jpg'%}">
             <div class="card-body">
-              <p class="card-text"> 25% <s>4.921$</s> ahora en 3.691$</p>
+              <p class="card-text"> Feroz<s></s>Se toman plaza dignidad</p>
             </div>
           </div>
         </div>  
 
         <div class="col-md col-lg col-sm col-xl">        
           <div class="card">
-            <img class="card-img-top imagenes-tarjetas" src="{% static 'img/gta v.jpg'%}">
+            <img class="card-img-top imagenes-tarjetas" src="{% static 'img/c.jpg'%}">
             <div class="card-body">
-              <p class="card-text"> 10% <s>7.480$</s> ahora en 6.732$</p>
+              <p class="card-text"> Alto ciber acoso <s></s> Cuidado con los hackers en linea</p>
             </div>
           </div>
         </div>  
 
         <div class="col-md col-lg col-sm col-xl">        
           <div class="card">
-            <img class="card-img-top imagenes-tarjetas" src="{% static 'img/little nightmares 2.jpg'%}">
+            <img class="card-img-top imagenes-tarjetas" src="{% static 'img/d.jpg'%}">
             <div class="card-body">
-              <p class="card-text"> 25% <s>17.928$</s> ahora en 13.446$</p>
+              <p class="card-text">  Mapuches luchan por su pueblo<s></s> Resistencia</p>
             </div>
           </div>
         </div>  
 
         <div class="col-md col-lg col-sm col-xl">        
           <div class="card" >
-            <img class="card-img-top imagenes-tarjetas" src="{% static 'img/outlast 2.jpg' %}">
+            <img class="card-img-top imagenes-tarjetas" src="{% static 'img/e.jpg' %}">
             <div class="card-body">
-              <p class="card-text"> 20% <s>23.900$</s> ahora en 19.120$</p>
+              <p class="card-text"> Fraude por parte del <s></s>Gobierno</p>
             </div>
           </div>
 
@@ -217,9 +214,9 @@
         
         <div class="col-md col-lg col-sm col-xl">        
           <div class="card">
-            <img class="card-img-top imagenes-tarjetas" src="{% static 'img/horizon.jpeg' %}">
+            <img class="card-img-top imagenes-tarjetas" src="{% static 'img/f.jpeg' %}">
             <div class="card-body">
-              <p class="card-text"> 25% <s>4.921$</s> ahora en 3.691$</p>
+              <p class="card-text"> Seleccion chilena <s></s> queda fuera del mundial</p>
             </div>
           </div>
         </div>  
@@ -232,18 +229,22 @@
    <!--parrafos -->
     <div class="container">
       <p type="disk" class="parrafo-seccion">
-        GameGTX es una plataforma de distribución digital de videojuegos desarrollado por GameGTX corporation.
-        GameGTX ofrece protección contra piratería , servidores de emparejamiento, transmisiónes de video y servicios de redes sociales. 
-        también proporciona al "usuario" la "instalacion" y la "actualización" automática de juegos y características de comunidad como grupos
-        y listas de Amigos, guardados en la nube, voz en el juego y funcionalidad de chat.
+        Cansados de los medios de comunicaciones tradicionales que no siempre informan con la verdad, un grupo
+        de periodistas independientes conforman el colectivo de noticias “Caos news” y han decidido poner en su
+        plataforma web todas las noticias que han sido investigadas y que según su criterio deben ser vistas por el
+        pueblo. Para esto le solicitaron a usted realizar una plataforma web, con la cual han quedado bastante
+        contentos. Producto del buen desempeño que ha tenido la plataforma y dado que los usuarios se han familiarizado con
+        su uso, se le ha solicitado el trabajar en la segunda parte del proyecto que consiste en el desarrollo e
+        implementación de la plataforma de gestión de noticias por parte de otros periodistas independientes que
+        se van a integrar al proceso y para los cuales debe haber independencia para la creación de los artículos
+        informativos
      </p>
 
       <p type="disk" class="parrafo-seccion">
-        Se utiliza tanto por pequeños desarrolladores independientes como grandes corporaciones de software para la distribución de videjuegos y
-        Material multimedia relacionado. 
-        Para disfrutar de GameGTX es necesario estar registrado en el servicio mediante la creación de una cuenta gratuita, a la que se vincula
-        los videos juegos comprados por el Jugador. Estos juegos pueden ser tanto los juegos que ofrecen para la compra en la propia plataforma
-        como ciertos juegos comprados en tiendas fisicas.
+        Luego de varias reuniones que se han realizado para analizar las necesidades operacionales del colectivo y
+        de su relación con los otros periodistas o ciudadanos que quieran cooperar, se ha decidido en una primera
+        instancia el desarrollar el proceso de gestión de los nuevos colaboradores, para luego gestionar el proceso
+        de publicación de noticias que estos van a aportar al portal.
 
       </p>
   </div> 
@@ -277,16 +278,12 @@
     <!-- pie de paginas-->    
     <footer >
       <div class="left col-md col-lg col-sm col-xl">
-        <img id="logo-footer" src="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg'%}">
-        <h4>Autores: Cristobal Pardo,Daniel Landero y Ismael Mejias</h4>
+        <img id="logo-footer" src="{% static 'img/DiariosdelMundo.jpg'%}">
+        <h4>Autores: Ismael Mejias</h4>
         
-        <h5>Redes Sociales</h5>
-        
-        <a href="https://www.facebook.com/Game-GTX-105894964946128"><img class="imagenes-iconos"  src="{% static 'img/facebook.png'%}" ></a>
-        
-        <a href="https://www.instagram.com/gamegtx/"><img class="imagenes-iconos"  src="{% static 'img/instagram.jpg'%}"> </a>
+        <h5>Correo Electronico</h5>
         <br>
-        Gmail: Games_gtx@gmail.com  
+        Gmail: CaosNewsPorChile@gmail.com  
         derechos reservados &copy; 
       </div>
      

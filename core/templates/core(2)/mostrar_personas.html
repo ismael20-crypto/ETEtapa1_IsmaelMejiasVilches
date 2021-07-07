@@ -15,7 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="{% static 'css/estilos.css' %}" type="text/css" rel="stylesheet">
 
-    <link rel="icon" href="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg' %}" width="30" height="30">
+    <link rel="icon" href="{% static 'img/DiariosdelMundo.jpg' %}" width="30" height="30">
     
 
   </head>
@@ -28,7 +28,7 @@
     
     
       <a class="navbar-brand">
-        <img src="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg'%} " width="50" height="50" alt="">
+        <img src="{% static 'img/DiariosdelMundo.jpg'%} " width="50" height="50" alt="">
       </a>
     
       
@@ -38,13 +38,10 @@
       <div class="collapse navbar-collapse" id="opciones">   
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link " href="{% url 'quienes_somos' %}" >Quiénes somos?</a>
+            <a class="nav-link color-barra" href="{% url 'galeria' %}">Noticias Recientes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link color-barra" href="{% url 'galeria' %}">Galería</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link color-barra" href="#">Buscar</a>
+            <a class="nav-link color-barra" href="#">Buscador de Noticias</a>
           </li>
           <li class="nav-item">
             <a class="nav-link color-barra" href="#">Iniciar sesión</a>
@@ -65,12 +62,15 @@
             <tr>
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellido</th>
+                <th scope="col">Rut del colaborador</th>
                 <th scope="col">Edad</th>
                 <th scope="col">Teléfono</th>
                 <th scope="col">Fecha nacimiento</th>
                 <th scope="col">Género</th>
                 <th scope="col">Email</th>
                 <th scope="col">Nombre usuario</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">País</th>
                 <th scope="col">Contraseña</th>
                 <th scope="col">Modificar</th>
                 <th scope="col">Eliminar</th>
@@ -83,12 +83,15 @@
                     
                     <td> {{u.nombre_f}}</td>
                     <td> {{u.apellido_f}}</td>
+                    <td> {{u.Rut_del_colaborador_f}}</td>
                     <td> {{u.edad_f}}</td>
                     <td> {{u.numero_t_f}}</td>
                     <td> {{u.fecha_nacimiento_f}}</td>
                     <td> {{u.genero_f}}</td>
                     <td> {{u.email_f}}</td>
                     <td> {{u.nombre_usuario_f}}</td>
+                    <td> {{u.Dirección_f}}</td>
+                    <td> {{u.País}}</td>
                     <td> {{u.contrasena}}</td>
                     <td><a href="{% url 'modificar' u.nombre_usuario_f%}" class="btn btn-primary">Modificar</a></td>
                     <td><a href="{% url 'eliminar'  u.nombre_usuario_f%}" class="btn btn-primary">Eliminar  </a></td>
@@ -118,20 +121,17 @@
     <!-- pie de paginas-->    
     <footer >
       <div class="left col-md col-lg col-sm col-xl">
-        <img id="logo-footer" src="{% static 'img/9fef4a51-6960-4549-9802-c9310a17944f.jpg'%}">
-        <h4>Autores: Cristobal Pardo,Daniel Landero y Ismael Mejias</h4>
+        <img id="logo-footer" src="{% static 'img/DiariosdelMundo.jpg'%}">
+        <h4>Autores: Ismael Mejias</h4>
         
-        <h5>Redes Sociales</h5>
-        
-        <a href="https://www.facebook.com/Game-GTX-105894964946128"><img class="imagenes-iconos"  src="{% static 'img/facebook.png'%}" ></a>
-        
-        <a href="https://www.instagram.com/gamegtx/"><img class="imagenes-iconos"  src="{% static 'img/instagram.jpg'%}"> </a>
+        <h5>Correo Electronico</h5>
         <br>
-        Gmail: Games_gtx@gmail.com  
+        Gmail: CaosNewsPorChile@gmail.com  
         derechos reservados &copy; 
       </div>
      
     </footer>
+
       
     
 
